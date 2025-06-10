@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    text-align: center;
+    background-image: url('imagenes/ImgFanatic.png');
+    background-size: cover;         /* Cubre toda la pantalla sin deformar */
+    background-repeat: no-repeat;   /* No se repite */
+    background-position: center;    /* Centra la imagen */
+    background-attachment: fixed;   /* La mantiene fija al hacer scroll */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-input {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5%;
+    width: 50vw;
+    height: 70vh;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    margin-top: 10%;
+}
+
+.form-input .campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input .campo label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.form-input .campo input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-input button {
+    width: 30vw;
+    height: 7vh;
+    margin-top: 10px;
+}
+
+.form-input .Bot-Reguis {
+    padding-top: 20px;
+}
+
+.form-input h2 {
+    text-align: center;    
+}
+
+.form-input p {
+    text-align: center;    
+}

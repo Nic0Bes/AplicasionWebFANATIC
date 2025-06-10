@@ -1,0 +1,271 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-fondo: #969696;
+    --color-primario: #3a3a3a;
+    --color-acento: #d8b647;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-contacto: #136834;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--color-fondo);
+}
+
+
+.header {
+    background-color: var(--color-primario);
+    box-shadow: 0 0 10px #0002;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header__logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.header__title {
+    font-size: 30px;
+    color: var(--color-acento);
+    padding-right: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header__search {
+    width: 100%;
+    min-width: 45px;
+    justify-content: left;
+    display: flex;
+    gap: 10px;
+    flex: 1 1 100px;
+    padding-left: 20px;
+}
+
+.header__search input {
+    width: 100%;
+    min-width: 45px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.header__search button {
+    padding: 10px 20px;
+    background-color: var(--color-white);
+    color: #010705;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.header__search button:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.header__contact {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 2px 0;
+}
+
+.header__WppLogo {
+    width: 20px;
+    height: 20px;
+}
+
+h2 {
+    color: var(--color-acento);
+    margin: 0;
+    padding: 0;
+}
+
+
+/* NAV */
+.nav {
+    margin-top: 10px;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 12px 0;
+    border-top: 1px solid var(--color-fondo);
+}
+
+.contact {
+    padding: 12px 24px;     
+    font-size: 18px;        
+    color: var(--color-contacto) !important;  
+    cursor: pointer;      
+    text-decoration: none;     
+    display: inline-block;      
+    transition: background 0.3s;
+}
+
+.contact:hover {
+    color: #28db6d !important;
+}
+.nav__link, .contact {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: bold;
+    padding: 6px 12px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav__link:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-radius: 5px;
+}
+
+.nav__separator {
+    flex-basis: 150px;
+    height: 0;
+}
+
+.Espaciador {
+    height: 90vh;
+    background-color: transparent;
+}
+
+.BBB {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    justify-content: center;  
+    min-height: 100vh;       
+    text-align: center;      
+}
+
+.boxes {
+    border: 1px solid var(--color-black);
+    border-radius: 20px;
+    background-color: var(--color-white);
+    width: 80%;
+    height: 200px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.box {
+    border: 1px solid var(--color-black);
+    border-radius: 20px;
+    background-color: var(--color-white);
+    width: 150px;
+    height: 150px;
+}
+
+.Tipo__off {
+    padding-top: 20px;
+    font-size: 40px;
+    color:#444;
+}
+
+/* Oculta el checkbox visualmente pero lo mantiene funcional */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 101;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+}
+
+@media (max-width: 1000px) {
+    
+    .header__top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header__search {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .header__search input,
+    .header__search button {
+        width: 100%;
+    }
+
+    .header__title {
+        font-size: 24px;
+    }
+
+    .hamburger {
+        display: flex;
+        align-items: left;
+    }
+
+    .nav__list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--color-primario);
+        padding: 20px 0;
+        position: absolute;
+        width: 50%;
+        top: 100%;
+        left: 0;
+        z-index: 100;
+        border-bottom-right-radius: 20%;
+    }
+
+    .nav__separator {
+        flex-basis: 20px;
+    }
+
+    .menu-toggle:checked + .hamburger + nav .nav__list {
+        display: flex;
+    }
+}
+
+

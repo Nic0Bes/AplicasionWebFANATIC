@@ -1,0 +1,149 @@
+body {
+    width: 100vw;     /* 100% del ancho de la ventana del navegador */
+    height: 100vh;    /* 100% del alto de la ventana del navegador */
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #000000, #b3821f);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contenedor {
+    margin-left: 5%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.LogoNombre {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.Logo img{
+    width: 150px;
+    border-radius: 50%;
+}
+
+.Nomb-Fanatic {
+    font-size: 18px;
+    color: white;
+    margin-top: 10%
+}
+
+.Hist-Fanatic {
+    text-align: left;
+    color: white;
+    padding: 20px;
+    width: 30vw;
+    margin-left: 5%;
+    position: absolute;
+    bottom: 50px;
+}
+
+.Hist-Fanatic h3 {
+    color:blue;
+    font-family: Share_Tech;
+    font-size: 30px;
+}
+
+.form-input {
+    background-color: #fff;
+    padding: 20px;
+    margin: 25%;
+    margin-bottom: 0;
+    border-radius: 5%;
+    width: 50vw;
+    height: 70vh;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Sombra realista */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-input .campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input .campo label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.form-input .campo input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-input button {
+    width: 30vw;
+    height: 7vh;
+    margin-top: 20px;
+}
+
+.form-input .Bot-Reguis {
+    padding-top: 20px;
+}
+
+.form-input h2 {
+    text-align: center;    
+}
+
+.form-input p {
+    text-align: center;    
+}
+
+
+@media screen and (max-width: 950px) {
+    .contenedor {
+        height: 180px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .LogoNombre {
+        flex-direction: column;
+        margin: 0;
+        align-items: top;
+    }
+
+    .Logo img {
+        width: 75px;
+        margin-left: 10px;
+    }
+    
+    .Nomb-Fanatic {
+        font-size: 10px;
+    }
+
+    .Hist-Fanatic, h3 {
+        color: transparent !important;
+    }
+    
+    .form-input {
+        height: 55vh;
+        width: 80%;
+        align-items: center;
+        margin: 0;
+    }
+
+    .Bot-Reguis {
+        margin-top: -25px;
+    }
+
+    .form-input button {
+        height: 7vh;
+        width: 50vw;
+    }
+
+    .form-input .campo {
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+    }
+}
