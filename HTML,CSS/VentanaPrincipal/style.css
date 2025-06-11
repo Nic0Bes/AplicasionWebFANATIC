@@ -201,7 +201,7 @@ h2 {
     display: none;
 }
 
-.hamburger {
+.hamburger #categorias {
     display: none;
     flex-direction: column;
     gap: 5px;
@@ -210,11 +210,24 @@ h2 {
     z-index: 101;
 }
 
-.hamburger span {
+.hamburger #categorias span {
     width: 30px;
     height: 4px;
     background-color: var(--color-white);
     border-radius: 2px;
+}
+
+.Categorias__submenu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-primario);
+    padding-left: 20px;
+    border-left: 2px solid var(--color-white);
+}
+
+/* Muestra el submenú si el checkbox está activado */
+#menu-categorias:checked + label + .Categorias__submenu {
+    display: flex;
 }
 
 @media (max-width: 1000px) {
@@ -240,7 +253,7 @@ h2 {
         font-size: 24px;
     }
 
-    .hamburger {
+    .hamburger #categorias {
         display: flex;
         align-items: left;
     }

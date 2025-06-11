@@ -28,15 +28,43 @@
         <input type="checkbox" id="menu-toggle" class="menu-toggle" />
         <label for="menu-toggle" class="hamburger"> Ver opciones ^</label>
         <nav class="nav">
-            <ul class="nav__list">
-                <li><a href="#" class="nav__link">INICIO</a></li>
-                <li><a href="#" class="nav__link">Categorias</a></li>
-                <li><a href="#" class="nav__link">Ofertas</a></li>
-                <li class="nav__separator"></li>
-                <li><a href="#" class="nav__link">Modificar Cuenta</a></li>
-                <li><a href="#" class="nav__link">Mis Compras</a></li>
-                <li><a href="#" class="nav__link">Carrito</a></li>
+        <ul class="nav__list">
+            <li><a href="#" class="nav__link">INICIO</a></li>
+            <li>
+            <input type="checkbox" id="menu-categorias" class="menu-toggle" />
+            <label for="menu-categorias" class="nav__link">Categorías</label>
+            <ul class="Categorias__submenu">
+                <li>
+                <input type="checkbox" id="menu-hombre" class="menu-toggle" />
+                <label for="menu-hombre" class="nav__link">Hombre</label>
+                <ul>
+                    <li><a href="#" class="Categoria__link">Camisas</a></li>
+                    <li><a href="#" class="Categoria__link">Pantalones</a></li>
+                </ul>
+                </li>
+                <li>
+                <input type="checkbox" id="menu-mujer" class="menu-toggle" />
+                <label for="menu-mujer" class="nav__link">Mujer</label>
+                <ul>
+                    <li><a href="#" class="Categoria__link">Vestidos</a></li>
+                    <li><a href="#" class="Categoria__link">Faldas</a></li>
+                </ul>
+                </li>
+                <li>
+                <input type="checkbox" id="menu-niño" class="menu-toggle" />
+                <label for="menu-niño" class="nav__link">Mujer</label>
+                <ul>
+                    <li><a href="#" class="Categoria__link">Vestidos</a></li>
+                    <li><a href="#" class="Categoria__link">Faldas</a></li>
+                </ul>
+                </li>
             </ul>
+            </li>
+            <li><a href="#" class="nav__link">Ofertas</a></li>
+            <li><a href="#" class="nav__link">Modificar Cuenta</a></li>
+            <li><a href="#" class="nav__link">Mis Compras</a></li>
+            <li><a href="#" class="nav__link">Carrito</a></li>
+        </ul>
         </nav>
     </header>
     <div class="Espaciador"></div>
