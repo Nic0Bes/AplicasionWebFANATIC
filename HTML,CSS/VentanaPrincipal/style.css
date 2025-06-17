@@ -170,24 +170,24 @@ h2 {
     background-color: transparent;
 }
 
-.porfolio {
+.Ofertas {
     background-color: var(--color-primario);
     color: var(--color-white);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: center;
-    container-name: portfolio;
+    container-name: Ofertas;
     container-type: inline-size;
     justify-content: space-evenly;
 }
 
-.porfolio_title {
+.Ofertas_title {
     font-size: 3rem;
     margin-bottom: 0;
 }
 
-.porfolio__project-container {
+.Ofertas__Product-container {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 1300px;
@@ -198,13 +198,11 @@ h2 {
     min-height: 80vh;
 }
 
-.porfolio__project {
-    /* linear-gradient hace que se cree aomo una opcaidad en la imaguen como una sombra que depende el nuemo que le ponga es mas oscuro o menos */
+.Ofertas__Product {
     background-image: linear-gradient(#0005,#0005), url("dalto.jpg");
     background-position: center;
     background-size: cover;
     display: grid;
-    /* place-content sirve para centrar los items en el grid */
     place-content: center;
     border-radius: 12px;
     animation: aparecer both;
@@ -212,53 +210,47 @@ h2 {
     animation-range: cover 10% cover 30%;
 }
 
-.porfolio__project img {
+.Ofertas__Product img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
 }
 
-.porfolio__project:hover {
+.Ofertas__Product:hover {
     opacity: 0.74;
     outline: 2px solid #fff6;
 }
 
-/* porfolio queries */
-
-/* para sacar el la medida rem se hace la cantidad de pixeles dividido 16 */
-@container portfolio (min-width: 56.25rem) {
-    .porfolio__project-container {
+@container Ofertas (min-width: 56.25rem) {
+    .Ofertas__Product-container {
         grid-template-columns: repeat(auto-fill,minmax(420px,1fr));
     }
 
-    .porfolio__project:first-child {
+    .Ofertas__Product:first-child {
         grid-column: span 2;
     }
 
-    .porfolio__project:nth-child(6){
+    .Ofertas__Product:nth-child(6){
         grid-column: span 2;
     }
 }
 
-@container portfolio (min-width: 81.25rem) {
-    .porfolio__project-container {
+@container Ofertas (min-width: 81.25rem) {
+    .Ofertas__Product-container {
         grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     }
 
-    .porfolio__project:first-child {
+    .Ofertas__Product:first-child {
         grid-column: span 2;
         grid-row: span 2;
     }
 
-    .porfolio__project:nth-child(6){
+    .Ofertas__Product:nth-child(6){
         grid-column: span 4;
     }
 }
 
-/* portfolio ends */
-
-/* Oculta el checkbox visualmente pero lo mantiene funcional */
 .menu-toggle {
     display: none;
 }
