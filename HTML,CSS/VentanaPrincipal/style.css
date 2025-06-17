@@ -1,8 +1,18 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,       /* 1 para ícono relleno */
+        'wght' 400,     /* peso: 100 a 700 */
+        'GRAD' 0,       /* contraste */
+        'opsz' 24;      /* tamaño óptico */
+        font-size: 24px;  /* tamaño real del ícono */
+        vertical-align: middle;
+        cursor: pointer; /* opcional: si es un botón */
 }
 
 :root {
@@ -160,44 +170,100 @@ h2 {
     background-color: transparent;
 }
 
-.BBB {
+.porfolio {
+    background-color: var(--color-primario);
+    color: var(--color-white);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;      
-    justify-content: center;  
-    min-height: 100vh;       
-    text-align: center;      
+    text-align: center;
+    container-name: portfolio;
+    container-type: inline-size;
+    justify-content: space-evenly;
 }
 
-.boxes {
-    border: 1px solid var(--color-black);
-    border-radius: 20px;
-    background-color: var(--color-white);
-    width: 80%;
-    height: 200px;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-around;
-    align-items: center;
+.porfolio_title {
+    font-size: 3rem;
+    margin-bottom: 0;
 }
 
-
-.box {
-    border: 1px solid var(--color-black);
-    border-radius: 20px;
-    background-color: var(--color-white);
-    width: 150px;
-    height: 150px;
+.porfolio__project-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+    gap: 12px;
+    padding: 12px;
+    min-height: 80vh;
 }
 
-.Tipo__off {
-    padding-top: 20px;
-    font-size: 40px;
-    color:#444;
+.porfolio__project {
+    /* linear-gradient hace que se cree aomo una opcaidad en la imaguen como una sombra que depende el nuemo que le ponga es mas oscuro o menos */
+    background-image: linear-gradient(#0005,#0005), url("dalto.jpg");
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    /* place-content sirve para centrar los items en el grid */
+    place-content: center;
+    border-radius: 12px;
+    animation: aparecer both;
+    animation-timeline: view();
+    animation-range: cover 10% cover 30%;
 }
+
+.porfolio__project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.porfolio__project:hover {
+    opacity: 0.74;
+    outline: 2px solid #fff6;
+}
+
+/* porfolio queries */
+
+/* para sacar el la medida rem se hace la cantidad de pixeles dividido 16 */
+@container portfolio (min-width: 56.25rem) {
+    .porfolio__project-container {
+        grid-template-columns: repeat(auto-fill,minmax(420px,1fr));
+    }
+
+    .porfolio__project:first-child {
+        grid-column: span 2;
+    }
+
+    .porfolio__project:nth-child(6){
+        grid-column: span 2;
+    }
+}
+
+@container portfolio (min-width: 81.25rem) {
+    .porfolio__project-container {
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    }
+
+    .porfolio__project:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .porfolio__project:nth-child(6){
+        grid-column: span 4;
+    }
+}
+
+/* portfolio ends */
 
 /* Oculta el checkbox visualmente pero lo mantiene funcional */
 .menu-toggle {
+    display: none;
+}
+
+.hamburger {
     display: none;
 }
 
@@ -253,6 +319,10 @@ h2 {
         font-size: 24px;
     }
 
+    .hamburger {
+    display: flex;
+    }
+
     .hamburger #categorias {
         display: flex;
         align-items: left;
@@ -265,7 +335,7 @@ h2 {
         background-color: var(--color-primario);
         padding: 20px 0;
         position: absolute;
-        width: 50%;
+        width: 250px;
         top: 100%;
         left: 0;
         z-index: 100;
@@ -280,5 +350,3 @@ h2 {
         display: flex;
     }
 }
-
-
