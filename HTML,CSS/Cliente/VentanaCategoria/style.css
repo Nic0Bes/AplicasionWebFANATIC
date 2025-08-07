@@ -18,6 +18,7 @@
 :root {
     --color-fondo: #969696;
     --color-primario: #3a3a3a;
+    --color-primario-ofertas: #4b4b4b;
     --color-acento: #d8b647;
     --color-white: #fff;
     --color-black: #000;
@@ -145,7 +146,7 @@ h2 {
 .contact:hover {
     color: #28db6d !important;
 }
-.nav__link, .contact {
+.nav__linkeding, .nav__link, .contact {
     text-decoration: none;
     color: var(--color-white);
     font-weight: bold;
@@ -160,95 +161,18 @@ h2 {
     border-radius: 5px;
 }
 
+.nav__linkeding {
+    margin: 10px; /* Espacio inferior entre cada link */
+    display: block;
+}
+
+.nav__linkeding:hover {
+    color: var(--color-acento)
+}
+
 .nav__separator {
     flex-basis: 150px;
     height: 0;
-}
-
-.Espaciador {
-    height: 90vh;
-    background-color: transparent;
-}
-
-.Ofertas {
-    background-color: var(--color-primario);
-    color: var(--color-white);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    container-name: Ofertas;
-    container-type: inline-size;
-    justify-content: space-evenly;
-}
-
-.Ofertas_title {
-    font-size: 3rem;
-    margin-bottom: 0;
-}
-
-.Ofertas__Product-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: 1300px;
-    margin: auto;
-    width: 100%;
-    gap: 12px;
-    padding: 12px;
-    min-height: 80vh;
-}
-
-.Ofertas__Product {
-    background-image: linear-gradient(#0005,#0005), url("dalto.jpg");
-    background-position: center;
-    background-size: cover;
-    display: grid;
-    place-content: center;
-    border-radius: 12px;
-    animation: aparecer both;
-    animation-timeline: view();
-    animation-range: cover 10% cover 30%;
-}
-
-.Ofertas__Product img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.Ofertas__Product:hover {
-    opacity: 0.74;
-    outline: 2px solid #fff6;
-}
-
-@container Ofertas (min-width: 56.25rem) {
-    .Ofertas__Product-container {
-        grid-template-columns: repeat(auto-fill,minmax(420px,1fr));
-    }
-
-    .Ofertas__Product:first-child {
-        grid-column: span 2;
-    }
-
-    .Ofertas__Product:nth-child(6){
-        grid-column: span 2;
-    }
-}
-
-@container Ofertas (min-width: 81.25rem) {
-    .Ofertas__Product-container {
-        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-    }
-
-    .Ofertas__Product:first-child {
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-
-    .Ofertas__Product:nth-child(6){
-        grid-column: span 4;
-    }
 }
 
 .menu-toggle {
@@ -281,12 +205,29 @@ h2 {
     background-color: var(--color-primario);
     padding-left: 20px;
     border-left: 2px solid var(--color-white);
+    margin: 5px;
+    margin-left: 0;
+    list-style: none;
+    position: absolute;
 }
 
 /* Muestra el submenú si el checkbox está activado */
 #menu-categorias:checked + label + .Categorias__submenu {
     display: flex;
 }
+
+#menu-hombre:checked + .Categoria__ul-Hombre {
+    display: block;
+}
+
+#menu-mujer:checked+ .Categoria__ul-Mujer {
+    display: block;
+}
+
+#menu-niño:checked + .Categoria__ul-Niños {
+    display: block;
+}
+
 
 @media (max-width: 1000px) {
     

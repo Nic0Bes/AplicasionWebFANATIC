@@ -15,10 +15,10 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 5%;
-    width: 50vw;
+    width: 30vw;
     height: 70vh;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    margin-top: 10%;
+    margin: 5.5%;
 }
 
 .form-input .campo {

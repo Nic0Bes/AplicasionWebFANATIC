@@ -3,12 +3,13 @@ body {
     height: 100vh;    /* 100% del alto de la ventana del navegador */
     margin: 0;
     overflow: hidden;
-    background: linear-gradient(to bottom, #000000, #b3821f);
+    background: linear-gradient(to bottom, #000000, #B3821F);
     font-family: 'Times New Roman', Times, serif;
 }
 
 .contenedor {
-    margin-left: 5%;
+    margin: 10%;
+    margin-top: 0;
     height: 60vh;
     display: flex;
     align-items: center;
@@ -38,7 +39,7 @@ body {
     color: white;
     padding: 20px;
     width: 30vw;
-    margin-left: 5%;
+    margin-left: 10%;
     position: absolute;
     bottom: 50px;
 }
